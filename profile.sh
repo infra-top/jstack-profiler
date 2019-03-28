@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -z "$1" ]
 then
@@ -43,7 +43,8 @@ do
   jstack $1 >> $OUTPUT
   printf "."
   sleep $SAMPLE_PERIOD_IN_SECOND
-  i=$[$i + 1]
+  #i=$[$i + 1]
+  (( i += 1 ))
 done
 echo ""
 echo "Processing $ITERATIONS stack traces..."
